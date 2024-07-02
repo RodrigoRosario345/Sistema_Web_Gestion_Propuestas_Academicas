@@ -1,0 +1,972 @@
+.container_temas {
+    padding: 3.1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+input,
+select {
+    background: transparent;
+}
+
+.search {
+    position: relative;
+}
+
+.searchbar {
+    width: 100%;
+    border: 1px solid var(--black);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: text;
+    height: 55px;
+    border-radius: 20px;
+}
+
+.search-icon {
+    margin-right: 0.5rem;
+    color: var(--blue-clear);
+    font-size: 1.4rem;
+}
+
+.search-icon:hover {
+    color: var(--blue-strong);
+    cursor: pointer;
+}
+
+.search-prompt {
+    border: 0;
+    font-size: 1rem;
+}
+
+.search-prompt:focus {
+    outline: none;
+}
+
+.prompts {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    max-width: 55vw;
+
+}
+
+.prompts::-webkit-scrollbar {
+    display: none;
+}
+
+.prompt {
+    background-color: var(--blue-clear);
+    border-radius: 0.7rem;
+    display: flex;
+    padding: 0.35rem 0.45rem;
+    color: var(--white);
+    width: fit-content;
+    gap: 5px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.circle {
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.circle:hover {
+    background-color: var(--clr);
+    cursor: pointer;
+}
+
+.prompt-results {
+    margin-top: .6rem;
+    border-radius: 20px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    top: 59px;
+    z-index: 102;
+    width: 100%;
+    display: none;
+    max-height: 170px;
+    overflow-y: scroll;
+}
+
+.prompt-group {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    color: var(--grey);
+    cursor: default;
+}
+
+.prompt-result {
+    padding: 5px 15px;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.prompt-result:hover {
+    background-color: var(--blue-clear);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter label {
+    color: var(--grey);
+    font-size: 1rem;
+}
+
+.input_date {
+    margin-top: 0.5rem;
+    appearance: none;
+    border: none;
+    padding: 0;
+    color: var(--blue);
+    font-size: 1.1rem
+}
+
+.input_date::-webkit-calendar-picker-indicator {
+    margin-left: -17px;
+    filter: invert(12%) sepia(92%) saturate(431%) hue-rotate(179deg) brightness(94%) contrast(91%);
+}
+
+.input_date:focus {
+    outline: none;
+}
+
+.select_carrera {
+    border: 1px solid var(--black);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 20px;
+}
+
+.select_carrera option {
+    background-color: var(--white);
+}
+
+.select_carrera:focus {
+    outline: none;
+}
+
+.results {
+    width: 100%;
+    min-height: 500px;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 1rem;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.results .title {
+    position: absolute;
+    left: 2rem;
+    top: -0.8rem;
+    font-size: 1.2rem;
+    background-color: var(--white);
+}
+
+.results .row {
+    display: flex;
+    gap: 3vw;
+}
+
+/* list temas */
+
+/* Typography =======================*/
+
+/* Headings */
+
+
+/* enumation item */
+.enumeration-item {
+    width: 43%;
+    height: 2.6vw;
+    top: -7%;
+    left: -33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: relative;
+    background-color: var(--blue-strong)
+}
+
+.enumeration-item h1 {
+    color: var(--clr);
+    font-size: 2.1vw;
+    font-weight: 600;
+}
+
+
+/* Main heading for card's front cover */
+.card-front__heading {
+    height: 2.5vw;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.card-front__subheading {
+    max-height: 3.6vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: var(--grey_clear); 
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Main heading for inside page */
+.inside-page__heading {
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+/* Mixed */
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+.inside-page__heading,
+.card-front__text-view {
+    font-size: 1.2vw;
+    font-weight: 800;
+    margin-top: 0.2rem;
+    color: var(--blue-clear);
+}
+
+/* Front cover */
+
+.card-front__tp {
+    color: var(--clr);
+}
+
+
+/* Back cover */
+
+/* For inside page's body text */
+.inside-page__text {
+    color: var(--blue-strong);
+}
+
+
+/* Buttons =================================================*/
+
+.inside-page__btn {
+    background-color: transparent;
+    border: 3px solid;
+    border-radius: 0.5rem;
+    font-size: 1.1vw;
+    font-weight: 600;
+    overflow: hidden;
+    padding: 0.5vw .2vw;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 82%;
+    z-index: 10;
+    text-align: center;
+}
+
+.inside-page__btn::before {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleY(0);
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: -1;
+}
+
+.inside-page__btn--CIC {
+    border-color: var(--yellow-tag);
+    color: var(--yellow-tag);
+}
+
+.inside-page__btn--CIC::before {
+    background-color: var(--yellow-tag);
+}
+
+.inside-page__btn--SIS {
+    border-color: var(--blue-tag);
+    color: var(--blue-tag);
+}
+
+.inside-page__btn--SIS::before {
+    background-color: var(--blue-tag);
+}
+
+.inside-page__btn--TIC {
+    border-color: var(--green-tag);
+    color: var(--green-tag);
+}
+
+.inside-page__btn--TIC::before {
+    background-color: var(--green-tag);
+}
+
+.inside-page__btn--TEL {
+    border-color: var(--lilac-tag);
+    color: var(--lilac-tag);
+}
+
+.inside-page__btn--TEL::before {
+    background-color: var(--lilac-tag);
+}
+
+.inside-page__btn--DAD {
+    border-color: var(--red-tag);
+    color: var(--red-tag);
+}
+
+.inside-page__btn--DAD::before {
+    background-color: var(--red-tag);
+}
+
+.inside-page__btn:hover {
+    color: var(--clr);
+    cursor: pointer;
+}
+
+.inside-page__btn:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* Card ============================================*/
+
+/* Area to hold an individual card */
+/* .card-section {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+} */
+
+/* A container to hold the flip card and the inside page */
+.card-temas-list {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.5);
+    height: 26vw;
+    position: relative;
+    transition: all 1s ease;
+    width: 19vw;
+    margin-bottom: 1rem;
+}
+
+/* Flip card - covering both the front and inside front page */
+
+/* An outer container to hold the flip card. This excludes the inside page */
+.flip-card {
+    height: 26vw;
+    perspective: 100rem;
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    visibility: hidden;
+    width: 19vw;
+    z-index: 100;
+
+}
+
+/* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+/* This is done so content in the inside page can be selected */
+.flip-card>* {
+    visibility: visible;
+}
+
+/* An inner container to hold the flip card. This excludes the inside page */
+.flip-card__container {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    width: 100%;
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Styling for the front side of the flip card */
+
+/* container for the front side */
+.card-front {
+    background-color: var(--clr);
+    height: 26vw;
+    width: 19vw;
+}
+
+/* Front side's top section */
+.card-front__tp {
+    background-color: var(--blue-clear);
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+    display: flex;
+    flex-direction: column;
+    height: 23vw;
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+/* Front card's bottom section */
+.card-front__bt {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the back side of the flip card */
+
+.card-back {
+    background-color: var(--clr);
+    transform: rotateY(180deg);
+}
+
+
+/* Inside page */
+
+.inside-page {
+    background-color: var(--clr);
+    box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.25);
+    height: 100%;
+    /* padding: 1rem; */
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    width: 19vw;
+    z-index: 1;
+}
+
+.inside-page__container {
+    background-color: var(--clr);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+/* Functionality ====================================*/
+
+/* This is to keep the card centered (within its container) when opened */
+.card-temas-list:hover {
+    box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
+    width: 19vw;
+}
+
+/* When the card is hovered, the flip card container will rotate */
+.card-temas-list:hover .flip-card__container {
+    transform: rotateY(-180deg);
+}
+
+/* When the card is hovered, the shadow on the inside page will shrink to the left */
+.card-temas-list:hover .inside-page {
+    box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
+}
+
+
+/* Progress */
+
+.step-wizard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+}
+
+.step-wizard-list {
+    color: var(--blue-strong);
+    list-style-type: none;
+    border-radius: 10px;
+    display: flex;
+    padding: 0px 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.step-wizard-item {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 6.6vw;
+    position: relative;
+}
+
+.step-wizard-item+.step-wizard-item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.35vw;
+    background: var(--blue-strong);
+    width: 100%;
+    height: .17vw;
+    transform: translateX(-50%);
+    z-index: -10;
+}
+
+.progress-count {
+    height: 2.8vw;
+    width: 2.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    color: transparent;
+    font-size: 1.6vw;
+}
+
+.progress-count:after {
+    content: "";
+    height: 2.8vw;
+    width: 2.8vw;
+    background: var(--blue-strong);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.progress-count:before {
+    content: "";
+    height: .5vw;
+    width: 1.25vw;
+    border-left: 3px solid var(--white-strong);
+    border-bottom: 3px solid var(--white-strong);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%) rotate(-45deg);
+    transform-origin: center center;
+}
+
+.progress-label {
+    width: 5vw;
+    font-size: .9vw;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--clr);
+}
+
+
+
+
+.current-item .progress-count:before,
+.current-item~.step-wizard-item .progress-count:before {
+    display: none;
+}
+
+.current-item~.step-wizard-item .progress-count:after {
+    height: .5vw;
+    width: .5vw;
+}
+
+.current-item~.step-wizard-item .progress-label {
+    opacity: 0.2;
+}
+
+.current-item .progress-count:after {
+    background: var(--white-strong);
+    border: 2px solid var(--blue-strong);
+}
+
+.current-item .progress-count {
+    color: var(--blue-strong);
+}
+
+/* dates and tems */
+
+
+.tema {
+    width: 100%;
+    height: 87%;
+    background-color: var(--clr);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.bar {
+    height: 2.3vw;
+}
+
+.tema img {
+    width: 3.5vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 1.5rem;
+    left: 1vw;
+    z-index: 3;
+}
+
+.tema-header {
+    color: var(--clr);
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    top: 0;
+    z-index: 2;
+}
+
+.main_data {
+    margin: 0 1rem;
+    padding: 0.65vw 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.78vw;
+    height: 9.2vw;
+    border-bottom: 1px solid var(--grey);
+}
+
+
+.date {
+    font-size: 0.96vw;
+    color: var(--grey);
+    width: 100%;
+    text-align: end;
+}
+
+.trabajo_title {
+    color: var(--black);
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.1vw;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-family: var(--sf-pro-medium);
+}
+
+.sub_data {
+    padding: 0.5vw 1vw;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4vw;
+    margin-left: 1vw;
+}
+
+.data_label {
+    font-size: 1vw;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.data {
+    font-size: 1vw;
+    color: var(--black);
+    text-align: start;
+}
+
+
+
+
+/* detail tems */
+
+.tema_details {
+    width: 38vw;
+    height: 43vw;
+    background-color: var(--white);
+    padding: 1.5rem 2.3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+
+}
+
+.tema_details .title {
+
+    font-size: 1.7rem;
+    color: var(--grey)
+}
+
+.date-autores-doc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-preview {
+    width: 40%;
+    position: relative;
+}
+
+.doc-preview img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--black);
+}
+
+.data-authors-tema {
+    width: 55%;
+    height: 100%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: flex-start;
+}
+
+.detail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1vw;
+}
+
+.book_content {
+    width: 100%;
+    height: 84%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    gap: 0.45rem;
+    padding: 0 5px 0 0;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: inherit
+}
+
+.metadata {
+    display: flex;
+    justify-content: space-between;
+    color: var(--grey);
+    font-size: 0.8rem;
+}
+
+.book_title {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.paragraph {
+    font-size: 0.85rem;
+    text-align: justify;
+}
+
+/* .book_content ul{
+    font-size: 0.85rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+*/
+.book_content ul li,
+.book_content ol li {
+    margin-left: 1.1rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+
+.icon-button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+/* detail exito */
+
+
+.detail_sucess {
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--blue-clear);
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail_asigned_student {
+    width: max-content;
+    height: max-content;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.close_sucess {
+    display: flex;
+    margin-left: auto;
+    margin-right: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.sucess {
+    font-size: 8rem;
+    margin-bottom: 2.5rem;
+}
+
+.title_sucess {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.title_delete {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: .5rem;
+    font-family: var(--sf-pro-medium);
+}
+
+.buttons-actions-delete {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+
+
+.button-cancel-tema {
+    background-color: var(--white-strong);
+    width: 23%;
+    padding: .4rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--black);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.button-cancel-tema:hover {
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+
+.buttons-actions {
+    width: 100%;
+}
+
+
+.button-delete-tema {
+    background-color: var(--red-tag);
+    width: 100%;
+    padding: .4rem 1rem;
+    margin: none;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.button-delete-tema:hover {
+    border: none;
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+.button-asigned-temas {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+#title-delete-tema {
+    max-height: 3.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: var(--grey_clear); 
+    font-size: 1rem;
+}
+

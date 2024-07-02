@@ -1,0 +1,54 @@
+@page {
+    size: Letter;
+    margin: 0mm 10mm 3mm 10mm;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+/* h1{
+    text-align: center;
+    margin: 10px 0 25px 0;
+} */
+.logo {
+    height: 100px;
+}
+.logo-container {
+    text-align: right;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+.datos-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+}
+.datos-table td {
+    width: 50%;
+    /* text-align: left; */
+    border: none;
+    padding: 0;
+}
+.datos-table .fecha {
+    text-align: right;
+}  
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.main-table, .main-table th, .main-table td {
+    border: 1px solid black;
+}
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
